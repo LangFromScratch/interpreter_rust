@@ -24,7 +24,7 @@ impl<'a> Tokenizer<'a> {
     /// 
     /// ## 引数
     /// 
-    /// * `input` - 合算する1つ目の値。
+    /// * `input` - 入力された値。
     /// 
     pub fn new(input: &'a str) -> Self {
         let mut tokenizer = Tokenizer{
