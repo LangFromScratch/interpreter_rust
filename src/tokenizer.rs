@@ -168,9 +168,6 @@ impl<'a> Tokenizer<'a> {
             b')' => {
                 token = Self::new_token(Token::R_PAREN, self.pos_char);
             }
-            b',' => {
-                token = Self::new_token(Token::COMMA, self.pos_char);
-            }
             b'{' => {
                 token = Self::new_token(Token::L_BRACE, self.pos_char);
             }
@@ -185,6 +182,9 @@ impl<'a> Tokenizer<'a> {
             }
 
             // 区切り
+            b',' => {
+                token = Self::new_token(Token::COMMA, self.pos_char);
+            }
             b';' => {
                 token = Self::new_token(Token::SEMI_COLON, self.pos_char);
             }
