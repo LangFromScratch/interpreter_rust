@@ -1,3 +1,6 @@
+//! Tokenを定義するmodです。
+//! astに依存しています
+
 use super::ast::{Precedence};
 
 #[derive(Debug, Eq, PartialEq, Clone, Copy, Hash, Ord, PartialOrd)]

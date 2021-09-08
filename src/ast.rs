@@ -1,3 +1,5 @@
+//! 抽象構文木(AST)を行うmodです。
+
 use std::fmt;
 use std::collections::BTreeMap;
 
