@@ -1,6 +1,3 @@
-//! 字句解析(Tokenizer)を行うmodです。
-//! Tokenに依存しています
-
 use super::token::{Tokens, Token, get_keyword};
 
 
