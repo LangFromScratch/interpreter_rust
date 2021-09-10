@@ -54,7 +54,7 @@ pub enum Token {
 /// 
 /// ## 引数
 /// 
-/// * `ident` - 文字列のアドレス
+/// * `ident` - 識別子
 /// 
 pub fn get_keyword(ident: &str) -> Token {
     match ident {
