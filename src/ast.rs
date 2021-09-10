@@ -15,6 +15,7 @@ impl fmt::Display for Program {
     }
 }
 
+/// Statement(文) の実装
 #[derive(Debug, Eq, PartialEq, Clone, Hash, Ord, PartialOrd)]
 pub enum Statement {
     // let
@@ -59,6 +60,7 @@ impl fmt::Display for Statement {
     }
 }
 
+/// Expression(式) の実装
 #[derive(Debug, Eq, PartialEq, Clone, Hash, Ord, PartialOrd)]
 pub enum Expression {
     Identifier(String),

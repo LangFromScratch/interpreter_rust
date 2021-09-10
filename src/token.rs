@@ -1,5 +1,6 @@
 use super::ast::{Precedence};
 
+/// Token の構造体
 #[derive(Debug, Eq, PartialEq, Clone, Copy, Hash, Ord, PartialOrd)]
 pub enum Token {
     EOF,        // 終端
@@ -49,6 +50,12 @@ pub enum Token {
     DEFAULT,
 }
 
+/// # キーワードの取得
+/// 
+/// ## 引数
+/// 
+/// * `ident` - 文字列のアドレス
+/// 
 pub fn get_keyword(ident: &str) -> Token {
     match ident {
         "function" => {
@@ -78,6 +85,7 @@ pub fn get_keyword(ident: &str) -> Token {
     }
 }
 
+/// Tokens の構造体
 #[derive(Debug, Eq, PartialEq, Clone, Hash, Ord, PartialOrd)]
 pub struct Tokens {
     pub token_type: Token,
@@ -85,6 +93,8 @@ pub struct Tokens {
 }
 
 impl Tokens {
+
+    /// # 優先順位の取得
     pub fn get_precedence(&mut self) -> Precedence {
         match self.token_type {
             Token::EQUAL => Precedence::EQUALS,
